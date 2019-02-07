@@ -1,0 +1,155 @@
+$dark-grey: #1e1e1e
+$light-grey: #f2f2f2 
+$google-blue: #2877ff
+$font-color: #404040
+$button-font-color: #757575
+$text: #212121
+body
+  padding: 0
+  margin: 0
+  font-family: Roboto
+  font-size: 62.5%
+  color: $font-color
+*
+  padding: 0
+  margin: 0
+.left-nav
+  grid-column: 1 / 1
+.right-nav
+  grid-column: 3 / 4
+
+.container
+  display: grid
+  height: 100vH
+  grid-template-columns: 10% 80% 10%
+  grid-template-rows: 10vH auto 13vH
+
+  header
+    grid-column-start: 1
+    grid-column-end: 4
+    display: flex   
+    color: $text
+    nav
+      display: flex
+      justify-content: space-between
+      width: 100%
+      box-sizing: border-box
+      font-size: 1.3em
+      padding: 2em
+      ul
+        display: flex
+        li
+          list-style-type: none
+          padding-right: 1.5em
+          cursor: pointer
+          &:hover
+            text-decoration: underline
+          &:last-child
+            padding-right: 0
+          img
+            width: 1.3em
+            filter: opacity(65%)
+            transition: 0.2s
+            &:hover
+              filter: opacity(100%)
+    
+main
+  grid-row: 2 / 3
+  grid-column: 2 / 3
+  display: flex
+  justify-content: center 
+  align-items: center
+  flex-direction: column
+  p
+    font-size: 0.8rem
+  img#googleimage
+    width: 272px
+    margin-bottom: 25px
+  form
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .buttons 
+      margin-bottom: 2.5em
+    #search-bar
+      width: 98vW 
+      max-width: 600px
+      height: 50px
+      border: 1px solid lightgrey
+      display: flex
+      z-index: 300
+      box-sizing: border-box
+      border-radius: 2px
+      padding-right: 2em
+      padding-left: 1rem
+      margin-bottom: 2rem
+      box-shadow: 0px 3px 10px -5px
+      align-items: center
+      transition: 0.2s
+      @media (min-width: 600px)
+        width: 50vW
+      &:hover
+        box-shadow: 0px 4px 12px -4px
+      input[type="text"]
+        height: 100%
+        width: 100%
+        border: 0
+        font-size: 1.8em
+        box-sizing: border-box
+        &:focus
+          outline: none
+      img
+        height: 25px
+        width: auto
+    input[type="submit"]
+      width: 10rem
+      height: 2.5rem
+      padding: 0
+      background: $light-grey
+      border-radius: 2px
+      border: 0
+      color: $button-font-color
+      font-family: helvetica
+      font-weight: bold
+      font-size: 1.4em
+      &:hover
+        border: thin solid lightgrey
+        box-shadow: 0 2px 15px -7px
+        color: black
+      &:nth-of-type(1)
+        margin-right: 2em
+footer
+  grid-row: 3 / 4
+  grid-column: 1 / 4 
+  display: flex
+  width: 100vW
+  flex-direction: column
+  justify-content: space-between
+  background: $light-grey
+  font-size: 1.3em
+  color: #5D6166
+  div
+    background: $light-grey
+    border-bottom: 1px solid #e5e5e5
+    border-top: 1px solid #e5e5e5
+    padding: 1em 2em 
+  .sub-footer
+    display: flex
+    box-sizing: border-box 
+    width: 100%
+    justify-content: space-between
+    padding: 1em 2em
+    align-content: center
+    ul
+      display: flex
+      flex-direction: row 
+
+      li
+        list-style-type: none
+        padding-right: 1.5em
+        cursor: pointer
+        &:hover
+          text-decoration: underline
+        &:last-child
+          padding-right: 0
